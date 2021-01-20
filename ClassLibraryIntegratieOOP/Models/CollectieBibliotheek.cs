@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace ClassLibraryIntegratieOOP.Models
 {
@@ -242,31 +239,17 @@ namespace ClassLibraryIntegratieOOP.Models
         }
         public static void LoadAll()
         {
-            //I needed to put this to prevent conflicts
-            Console.WriteLine("Loading data...");
-            Thread.Sleep(100);
             CheckDataFiles();
-            Thread.Sleep(100);
             LoadUsersFromFile();
             LoadUserData();
             CheckUserData();
-            Thread.Sleep(100);
             LoadCollectionsFromFile();
-            Thread.Sleep(100);
-            
-            Console.WriteLine("done");
-            Console.Clear();
         }
         public static void SaveAll()
         {
-            Console.WriteLine("Saving data...");
             SaveUsersToFile();
-            Thread.Sleep(100);
             SaveCollectionsToFile();
-            Thread.Sleep(100);
             SaveUserData();
-            Console.WriteLine("done");
-            Console.Clear();
         }
         
     }
